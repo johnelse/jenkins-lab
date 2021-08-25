@@ -1,6 +1,6 @@
 #!/bin/bash
 
 java -jar agent.jar \
-    -jnlpUrl $SLAVE_URL \
-    -secret $SLAVE_SECRET \
+    -jnlpUrl $AGENT_URL \
+    -secret $AGENT_SECRET \
     -workDir "/home/jenkins"
