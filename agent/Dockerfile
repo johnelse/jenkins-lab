@@ -4,7 +4,7 @@ LABEL maintainer.name="John Else" \
 
 RUN     apt-get -y update
 
-RUN     apt-get -y install git openjdk-8-jre-headless
+RUN     apt-get -y install git git-lfs openjdk-8-jre-headless
 
 RUN     useradd jenkins
 RUN     mkdir -p /home/jenkins
