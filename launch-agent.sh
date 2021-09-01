@@ -29,6 +29,7 @@ docker run -d --rm --name $CONTAINER_NAME \
     -e AGENT_URL=http://jenkins:8080/computer/${NODE_NAME}/jenkins-agent.jnlp \
     -e AGENT_SECRET=$AGENT_SECRET \
     -v ~/.ssh:/home/jenkins/.ssh \
+    -v jenkins-node-${NODE_NAME}:/home/jenkins \
     ${USER}/jenkins-agent /home/jenkins/launch.sh
 
 echo "Agent $NODE_NAME is now running"
