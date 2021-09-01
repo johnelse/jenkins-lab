@@ -1,6 +1,11 @@
 jenkins-lab
 -----------
 
+Lets you run a jenkins controller and multiple agents on a single machine,
+as [docker](https://www.docker.com/) containers. The controller and each
+agent will all have their own docker volume which persists across container
+restarts.
+
 First, launch the jenkins controller:
 
 ```
