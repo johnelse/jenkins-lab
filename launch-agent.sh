@@ -22,7 +22,7 @@ fi
 AGENT_SECRET=$(curl -L -s -u $JENKINS_USERNAME:$JENKINS_PASSWORD -X GET http://localhost:8080/computer/${NODE_NAME}/jenkins-agent.jnlp \
     | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")
 
-make -C agent
+docker build -t ${USER}/jenkins-agent agent
 
 docker run -d --rm --name $CONTAINER_NAME \
     --network jenkins \
